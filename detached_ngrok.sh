@@ -1,1 +1,2 @@
-ngrok tcp 22 > /dev/null &
+apt install screen -y
+screen -d -m ngrok tcp 22
