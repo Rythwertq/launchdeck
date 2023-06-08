@@ -1,7 +1,7 @@
 apt update
 apt install sudo -y
 apt install openssh-server -y
-wget https://github.com/Rythwertq/launchdeck/raw/main/id_rsa.pub
+wget https://raw.githubusercontent.com/Rythwertq/launchdeck/main/id_rsa.pub
 mv id_rsa.pub authorized_keys
 rm -r ~/.ssh/authorized_keys
 cp authorized_keys ~/.ssh
