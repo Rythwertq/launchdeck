@@ -1,1 +1,1 @@
-ngrok http 22 > /dev/null &
+ngrok tcp 22 > /dev/null &
