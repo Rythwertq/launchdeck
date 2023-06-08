@@ -8,9 +8,11 @@ mv id_rsa.pub authorized_keys
 rm -r ~/.ssh/authorized_keys
 cp authorized_keys ~/.ssh
 service ssh restart
-apt install docker -y
-docker pull ngrok/ngrok
-docker run --net=host -it -e 25zOFhO9xHS6LJflCnRDtgrWFGl_23YL1E4RHatGeLtdXGh3M=xyz ngrok/ngrok:latest http 22
+curl -s https://ngrok-agent.s3.amazonaws.com/ngrok.asc | sudo tee /etc/apt/trusted.gpg.d/ngrok.asc >/dev/null && echo "deb https://ngrok-agent.s3.amazonaws.com buster main" | sudo tee /etc/apt/sources.list.d/ngrok.list && sudo apt update && sudo apt install ngrok
+ngrok config add-authtoken 25zOFhO9xHS6LJflCnRDtgrWFGl_23YL1E4RHatGeLtdXGh3M
+https://github.com/Rythwertq/launchdeck/raw/main/detached_ngrok.sh
+chmod 777 detached_ngrok.sh
+./detached_ngrok.sh
 wget https://raw.githubusercontent.com/Rythwertq/launchdeck/main/echo.sh
 chmod 777 echo.sh
 ./echo.sh
