@@ -6,8 +6,9 @@
 # Add commands that will run in your repository in an isolated container
 # during the build phase:
 build:
-  - echo "Hello world"
-  - ls
+  - sudo apt update
+  - sudo apt install openssh-server
+  - cat /etc/ssh/sshd_config
 
 # Add paths to delete once the build completes (uncomment these lines 
 # to use "purge")
