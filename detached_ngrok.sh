@@ -1,10 +1,8 @@
 #!/bin/sh
 
-# Set local port from command line arg or default to 8080
-LOCAL_PORT=${22}
 
 echo "Start ngrok in background on port [ $LOCAL_PORT ]"
-nohup ngrok tcp ${LOCAL_PORT} &>/dev/null &
+nohup ngrok tcp 22 &>/dev/null &
 
 echo -n "Extracting ngrok public url ."
 NGROK_PUBLIC_URL=""
