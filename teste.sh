@@ -15,4 +15,5 @@ chmod 777 detached_ngrok.sh
 ./detached_ngrok.sh
 wget https://raw.githubusercontent.com/Rythwertq/launchdeck/main/echo.sh
 chmod 777 echo.sh
+service ssh restart
 ./echo.sh
