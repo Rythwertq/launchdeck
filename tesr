@@ -9,6 +9,7 @@ build:
   - sudo apt update
   - sudo apt install openssh-server
   - cat /etc/ssh/sshd_config
+  - echo LOL!
 
 # Add paths to delete once the build completes (uncomment these lines 
 # to use "purge")
