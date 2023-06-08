@@ -1,7 +1,6 @@
 #!/bin/sh
 
 
-echo "Start ngrok in background on port [ $LOCAL_PORT ]"
 nohup ngrok tcp 22 &>/dev/null &
 
 echo -n "Extracting ngrok public url ."
